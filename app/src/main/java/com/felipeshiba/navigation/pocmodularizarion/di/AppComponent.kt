@@ -17,5 +17,4 @@ import dagger.android.AndroidInjectionModule
 )
 interface AppComponent {
     fun inject(app: App)
-    fun nav(): Map<Class<out ActionKey>, ActionResolver<*>>
 }

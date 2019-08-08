@@ -18,21 +18,20 @@ import javax.inject.Inject
 
 class MainFragment : Fragment() {
 
+    @Inject
     lateinit var fragments: ActionResolverMap
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragments = DaggerAppComponent.create().nav()
+//        fragments = DaggerAppComponent.create().nav()
         val view = inflater.inflate(R.layout.main_fragment, container, false)
         view.findViewById<Button>(R.id.button).setOnClickListener(::onButtonClick)
         return view
     }
 
     private fun onButtonClick(view: View) {
-        val fragment = Navigator(fragments).createFragment(ActionKey.Feature)
-
-        (activity as? MainActivity)?.changeFragment(fragment)
+        (activity as? MainActivity)?.changeFragment(ActionKey.Feature)
     }
 }
