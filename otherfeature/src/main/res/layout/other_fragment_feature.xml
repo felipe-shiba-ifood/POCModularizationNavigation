@@ -5,14 +5,14 @@
     android:id="@+id/feature"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright"
-    tools:context=".FeatureFragment">
+    android:background="@android:color/holo_orange_dark"
+    tools:context="com.felipeshiba.navigation.feature.OtherFeatureFragment">
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Other Feature"
+        android:text="Done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

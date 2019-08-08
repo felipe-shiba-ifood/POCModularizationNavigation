@@ -1,2 +1,2 @@
-include ':app', ':feature', ':navigation'
+include ':app', ':feature', ':navigation', ':otherfeature'
 rootProject.name='POC Modularizarion'

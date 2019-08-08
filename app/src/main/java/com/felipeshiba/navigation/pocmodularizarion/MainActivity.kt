@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.felipeshiba.navigation.navigation.ActionKey
 import com.felipeshiba.navigation.navigation.ActionResolverMap
+import com.felipeshiba.navigation.navigation.Container
 import com.felipeshiba.navigation.navigation.Navigator
 import com.felipeshiba.navigation.pocmodularizarion.ui.main.MainFragment
 import dagger.android.AndroidInjection
@@ -13,7 +14,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), HasAndroidInjector {
+class MainActivity : AppCompatActivity(), HasAndroidInjector, Container {
 
     @Inject
     lateinit var fragments: ActionResolverMap
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         }
     }
 
-    fun changeFragment(actionKey: ActionKey) {
+    override fun changeScreen(actionKey: ActionKey) {
         val fragment = Navigator(fragments).createFragment(actionKey)
 
         supportFragmentManager.beginTransaction()

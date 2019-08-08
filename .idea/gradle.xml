@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/navigation" />
+            <option value="$PROJECT_DIR$/otherfeature" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
