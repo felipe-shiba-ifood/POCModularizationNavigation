@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector, Container {
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, fragment)
-            .commitNow()
+            .addToBackStack(null)
+            .commit()
     }
 
     override fun androidInjector(): AndroidInjector<Any> = dispatchingAndroidInjector
