@@ -1,0 +1,2 @@
+include ':app', ':feature', ':navigation'
+rootProject.name='POC Modularizarion'
